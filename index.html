@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+	<div style="float:left; width:35%;">
+    <h1>CONFIGURATION</h1>
+    
+	<h2>Keyword</h2>
+	<input type="text" id="keyword" style="text-transform: uppercase;" > <button id="updateKeyword">UPDATE</button>
+	
+	<ul id="keyword_container"></ul>
+	</div>
+	
+	<div style="float:left">
+	<h1>ENCODING</h1>
+
+		<div style="float:left; padding-right:20px">
+			<h2>Source Text</h2>
+			<ul id="source_container"></ul>
+			<input type="text" id="otext" style="text-transform: uppercase;" >
+		</div>
+		
+		<div style="float:left">
+			<h2>Cipher Text</h2>
+			<input type="text" id="ctext">
+		</div>
+	</div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+	  
+	  
+	  keyword.addEventListener("input", function (e) {
+			var key = e.keyCode;
+			return ((key >= 65 && key <= 90) || key == 8);
+		});
+    </script>
+  </body>
+</html>
